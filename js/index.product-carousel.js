@@ -10,6 +10,14 @@ let currentSlideIdx = 0;
 function renderCarousel() {
     const slideContainer = document.querySelector('.product-carousel__slides');
     slideContainer.innerHTML = slides[currentSlideIdx];
+    if (window.matchMedia('(min-width: 768px)').matches) {  // Добавлямо можливість показувати декілька слайдів одночано, при досягненні умвови  
+        const secondSlideIdx = currentSlideIdx + 1 >= slides.length ? 0 : currentSlideIdx + 1; 
+        slideContainer.innerHTML += slides[secondSlideIdx]; 
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+            const thirdSlideIdx = secondSlideIdx + 1 >= slides.length ? 0 : currentSlideIdx + 1;
+            slideContainer.innerHTML += sledes[thirdSlideIdx]; 
+        } slideContainer
+    }
 } 
 
 function nextSlide() { // Функція для перегортання слайду вперед 
@@ -38,3 +46,6 @@ nextBtn.addEventListener('click', nextSlide); // Обробник подіх д�
 
 const prevBtn = document.querySelector('.product-carousel__btn-prev'); 
 prevBtn.addEventListener('click', prevSlide); // Обробник подіх для кнопки prev   
+
+window.addEventListener('resize', renderCarousel); 
+

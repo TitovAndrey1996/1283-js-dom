@@ -4,7 +4,9 @@ function init() { // Стартує наш JS
     import('./index.header-text.js'); // Вказуємо наші JS файли, які повинні завантажитись 
     import('./index.header-clock.js'); 
     import('./index.product-list.js'); 
-    import('./index.product-carousel.js');
+    import('./index.product-carousel.js'); 
+    import('./index.product-carousel-animated.js'); 
+
  }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length; // Рахує patials та їх завантаження
