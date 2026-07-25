@@ -6,6 +6,8 @@ function init() { // Стартує наш JS
     import('./index.product-list.js'); 
     import('./index.product-carousel.js'); 
     import('./index.product-carousel-animated.js'); 
+    import('./index.faq-accordion.js'); 
+
 
  }
 
