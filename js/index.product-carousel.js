@@ -15,7 +15,7 @@ function renderCarousel() {
         slideContainer.innerHTML += slides[secondSlideIdx]; 
         if (window.matchMedia('(min-width: 1024px)').matches) {
             const thirdSlideIdx = secondSlideIdx + 1 >= slides.length ? 0 : currentSlideIdx + 1;
-            slideContainer.innerHTML += sledes[thirdSlideIdx]; 
+            slideContainer.innerHTML += slides[thirdSlideIdx]; 
         } slideContainer
     }
 } 
